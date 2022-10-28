@@ -58,6 +58,7 @@ function Barang() {
       field: "action",
       headerName: "Action",
       sortable: false,
+      type: 'number',
       filterable: false,
       width: 90,
       renderCell: (params) => {

@@ -22,6 +22,15 @@ a {
   font-weight: 600;
   color: #4040d8
 }
+.MuiDataGrid-columnHeaders {
+  background-color: #f0f0f0;
+}
+.MuiTabs-root {
+  font-weight: 'bold';
+}
+.MuiDataGrid-iconSeparator {
+  visibility: 'hidden';
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
