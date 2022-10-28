@@ -53,7 +53,7 @@ function Admin({children, title }) {
 					>
 						<Toolbar variant="dense" >
 							<Typography variant="h6" component="div" sx={{ flexGrow: 1 }} align="center">
-								<Image src="/logo.png" width={100} height={30} />
+								<Image src="/logo.png" width={100} height={30} alt="Logo"/>
 							</Typography>
 						</Toolbar>
 						<Divider />
