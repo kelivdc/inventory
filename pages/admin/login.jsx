@@ -28,7 +28,7 @@ function Copyright(props) {
 			{...props}
 		>Powered by<br />
 			<Link color="inherit" href="https://pevesindo.com/">
-				<Image src="/logo.png" width={150} height={40} />
+				<Image src="/logo.png" width={150} height={40} alt="Logo" />
 			</Link>
 		</Typography>
 	);
