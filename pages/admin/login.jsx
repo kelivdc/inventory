@@ -124,7 +124,7 @@ function Login() {
 								variant="contained"
 								sx={{ mt: 3, mb: 2 }}
 							>
-								Sign In {admin_path}
+								Sign In
 							</Button>
 							<Copyright sx={{ mt: 5 }} />
 						</Box>
