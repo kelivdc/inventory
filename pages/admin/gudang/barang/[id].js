@@ -1,7 +1,9 @@
-import { Box, Chip, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Chip, Divider, Grid, Tab, Tabs, Typography } from "@mui/material";
 import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
+import Gudang from "../../../../components/barang/gudang";
+import Persediaan from "../../../../components/barang/persediaan";
 import Admin from "../../../../components/layouts/admin";
 
 function TabPanel(props) {
@@ -48,24 +50,45 @@ function Detail() {
         <title>Papan PVC NP002 4meter</title>
       </Head>
       <Admin title="Detail Barang">
-        <Box sx={{ bgcolor: 'background.paper', width: "100%" }}>
-          <Box p={2} sx={{bgcolor: 'background.paper'}}>
-            <Typography variant="h4">Papan PVC NP002 4meter</Typography>
-            <div>
-              Kategori Papan: <Chip label="Natapon 3" size="small" />
-            </div>
-            <div>
-              Kategori Produk:{" "}
-              <Chip
-                label="Papan"
-                color="success"
-                size="small"
-                variant="outlined"
-              />
-            </div>
-            <div>
-              Unit: <Chip label="Lembaran" size="small" />
-            </div>
+        <Box sx={{ bgcolor: "background.paper", width: "100%" }}>
+          <Box
+            p={2}
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{minWidth: '60%'}}>
+            <Typography variant="h4">
+              Papan PVC NP002 4meter              
+            </Typography>
+            <Typography color="#888">
+                No:  GOW 0002
+              </Typography>
+              <Typography variant="h6" color="green">
+                Stok: 20
+              </Typography>
+              </div>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6} textAlign="right">
+                Kategori Papan:
+              </Grid>
+              <Grid item xs={12} md={6}>
+                Natapon 3
+              </Grid>
+              <Grid item xs={12} md={6} textAlign="right">
+                Kategori Produk:
+              </Grid>
+              <Grid item xs={12} md={6}>
+                Papan
+              </Grid>
+              <Grid item xs={12} md={6} textAlign="right">
+                Unit:
+              </Grid>
+              <Grid item xs={12} md={6}>
+                Lembaran
+              </Grid>
+            </Grid>
           </Box>
           <Tabs
             value={value}
@@ -82,10 +105,10 @@ function Detail() {
             <Tab label="Mutasi" {...a11yProps(2)} />
           </Tabs>
           <TabPanel value={value} index={0}>
-            Isi Satu
+            <Persediaan />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            Isi Dua
+            <Gudang />
           </TabPanel>
           <TabPanel value={value} index={2}>
             Isi Tiga

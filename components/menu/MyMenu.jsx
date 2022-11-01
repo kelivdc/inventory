@@ -1,4 +1,4 @@
-import { Avatar, IconButton, Box, Typography, Button, Badge, Tooltip, useTheme, createTheme } from '@mui/material'
+import { Avatar, IconButton, Box, Typography, Button, Badge, Tooltip, useTheme, createTheme, Divider } from '@mui/material'
 import BuildIcon from '@mui/icons-material/Build';
 import MailIcon from '@mui/icons-material/Mail';
 import React, { useState } from 'react'
@@ -12,9 +12,12 @@ function MyMenu() {
 
     return (
         <>
-            <Typography>
-                Gudang: GOWA |
+            <Typography sx={{
+                paddingRight: "15px"
+            }}>
+                Gudang: GOWA                 
             </Typography>
+            <Divider  orientation="vertical" flexItem color="#ccc"/>
             <Tooltip title="Histories">
                 <IconButton color="inherit">
                     <ListAltOutlined fontSize='medium' />
